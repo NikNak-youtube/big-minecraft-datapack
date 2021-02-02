@@ -1,0 +1,130 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": {
+          "type": "minecraft:constant",
+          "value": 67
+        },
+        "p": {
+          "type": "minecraft:constant",
+          "value": 54
+        }
+      },
+      "bonus_rolls": {
+        "min": {
+          "type": "minecraft:constant",
+          "value": 6725
+        },
+        "max": {
+          "type": "minecraft:constant",
+          "value": 25465
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 6,
+          "quality": 0
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 78,
+          "quality": 657236,
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": {
+                  "type": "minecraft:constant",
+                  "value": 5523
+                },
+                "max": {
+                  "type": "minecraft:constant",
+                  "value": 6778
+                }
+              },
+              "add": true,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.289
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:fill_player_head",
+          "entity": "killer",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.678
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:time_check",
+          "value": {
+            "min": {
+              "min": {
+                "type": "minecraft:constant",
+                "value": 626
+              },
+              "max": {
+                "type": "minecraft:constant",
+                "value": 67268
+              }
+            },
+            "max": {
+              "min": {
+                "type": "minecraft:constant",
+                "value": -26567
+              },
+              "max": {
+                "type": "minecraft:constant",
+                "value": 4378
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:enchant_with_levels",
+      "levels": {
+        "type": "minecraft:uniform",
+        "min": {
+          "type": "minecraft:constant",
+          "value": 277
+        },
+        "max": {
+          "type": "minecraft:constant",
+          "value": 36776
+        }
+      },
+      "treasure": true,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.98
+        }
+      ]
+    }
+  ]
+}
